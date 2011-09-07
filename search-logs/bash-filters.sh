@@ -12,3 +12,5 @@ cat full-lc.txt | uniq > unique-lc.txt
 
 cat unique-lc.txt | egrep -o '[^ -]+-[^ -]+' | sort | uniq > dashed-words.txt
 
+# Stat
+cat full-lc.txt | sort | uniq -c | sort -nr > stat-lc.txt
