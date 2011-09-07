@@ -1,8 +1,8 @@
 
-# to lowercase
+# to lowercase, and delete all longer than 80 symbols
 
 export PERL_UNICODE=SDL
-cat full.txt | perl -ne 'print lc $_;' > full-lc.txt
+cat full.txt | perl -ne 'print lc $_;' | egrep -v '.{81,}' > full-lc.txt
 
 # Unique
 
